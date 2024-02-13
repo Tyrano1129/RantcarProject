@@ -5,28 +5,28 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.basic.rentcar.dao.UserDAO;
 import com.basic.rentcar.frontController.Controller;
 
-public class DeleteUserController implements Controller{
+public class ValidatePwController implements Controller {
 
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		String pw = request.getParameter("pw");
 		
-		String id = request.getParameter("id");
+		System.out.println(pw);
+		int cnt = UserDAO.getInstance().checkPw(pw);
+		String value = "";
 		
-		int cnt = UserDAO.getInstance().userOneDelete(id);
-		
-		if(cnt > 0) {
-			HttpSession session = request.getSession();
-			session.removeAttribute("logId");
-			response.getWriter().print(cnt);
+		if(cnt == 0) {
+			value = "valid";
 		}else {
-			throw new ServletException();
+			value = "notvalid";
 		}
+		
+		response.getWriter().print(value);
 		return null;
 	}
 
