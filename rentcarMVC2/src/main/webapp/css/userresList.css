@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+.title {
+	height: 50px;
+	line-height: 50px;
+	background: skyblue;
+	font-weight: bold;
+}
+
+.userreslist {
+	border-bottom: 1px solid black;
+	border-collapse: collapse;
+}
+
+.w150 {
+	width: 150px;
+}
+
+.w60 {
+	width: 70px;
+}
+
+.w90 {
+	width: 90px;
+}
+
+.w100 {
+	width: 100px;
+}
+
+.t_line {
+	border-bottom: 1px solid black;
+}
+
+.cursor {
+	transition: 0.3s;
+}
+
+.cursor:hover {
+	transform: scale(1.2);
+}
+
+.r_line {
+	border-right: 1px solid black;
+}
+
+.list {
+	height: 70px;
+	line-height: 40px;
+	background: #f3f3f3;
+}

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	width: 300px;
+	border-radius: 5px;
+	text-align: center;
+	color: rgb(16, 51, 97);
+}
+
+.inserttable img {
+	width: 200px;
+}
+
+.head {
+	background-color: aqua;
+}
+
+.insert {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.inserttable {
+	border-radius: 10px;
+}
+
+.inserttable td {
+	width: 150px;
+	box-sizing: border-box;
+}
+
+.inserttable input {
+	width: 100px;
+}

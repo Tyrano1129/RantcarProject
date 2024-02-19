@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.myslider {
+	width: 800px;
+	height: 300px;
+}
+
+.myslider .imges {
+	height: 300px;
+	box-sizing: border-box;
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+}
+
+.imges #imgcar {
+	width: 100%;
+}
+
+.myslider .slick-arrow {
+	display: none !important;
+}
+
+.myslider .slick-dots {
+	/* border: 1px solid black; */
+	bottom: 10px;
+}

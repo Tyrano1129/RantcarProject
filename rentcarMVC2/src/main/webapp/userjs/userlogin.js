@@ -29,7 +29,11 @@ function validCheck(form,ctx){
 	})
 	.then(response => response.text())
 	.then((data) =>{
-		if(data >= 1){
+		console.log(data);
+		if(data === "admin"){
+			alert("관리자 로그인 되었습니다.");
+			location.href = ctx+"/main.do";
+		}else if(data >= 1){
 			alert("로그인 성공");
 			location.href = ctx+"/main.do";
 		}else{

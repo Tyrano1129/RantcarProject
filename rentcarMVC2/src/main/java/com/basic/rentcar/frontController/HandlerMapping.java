@@ -2,6 +2,15 @@ package com.basic.rentcar.frontController;
 
 import java.util.HashMap;
 
+import com.basic.rentcar.controller.rentcar.CarInfoController;
+import com.basic.rentcar.controller.rentcar.CarListController;
+import com.basic.rentcar.controller.rentcar.DeleteResController;
+import com.basic.rentcar.controller.rentcar.InsertCarController;
+import com.basic.rentcar.controller.rentcar.RegisterCarController;
+import com.basic.rentcar.controller.rentcar.ReservateCarController;
+import com.basic.rentcar.controller.rentcar.SelectCarOptionController;
+import com.basic.rentcar.controller.rentcar.UploadCarImgController;
+import com.basic.rentcar.controller.rentcar.UserReserveListController;
 import com.basic.rentcar.controller.user.*;
 
 public class HandlerMapping {
@@ -19,6 +28,15 @@ public class HandlerMapping {
 		mappings.put("/vaildPwCheck.do", new ValidatePwController());
 		mappings.put("/userDelete.do", new DeleteUserController());
 		mappings.put("/userUpdate.do", new UpdateuserController());
+		mappings.put("/carList.do",new CarListController());
+		mappings.put("/rentCartInfo.do", new CarInfoController());
+		mappings.put("/carOption.do", new SelectCarOptionController());
+		mappings.put("/reserveCarView.do", new ReservateCarController());
+		mappings.put("/userReserveList.do", new UserReserveListController());
+		mappings.put("/deleteres.do", new DeleteResController());
+		mappings.put("/imgupload.do", new UploadCarImgController());
+		mappings.put("/carInsert.do", new InsertCarController());
+		mappings.put("/registerCar.do", new RegisterCarController());
 	}
 	
 	public Controller getController(String url) {

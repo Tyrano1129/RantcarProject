@@ -6,26 +6,22 @@ public class Rentcar {
 	private int category;
 	private int price;
 	private int usepeople;
-	private int total_qty;
+	private int totalQty;
 	private String company;
 	private String img;
 	private String info;
-	private String sfileName;
-	private String ofileName;
 	
-	public Rentcar(int no, String name, int category, int price, int usepeople, int total_qty, String company,
-			String img, String info, String sfileName, String ofileName) {
+	public Rentcar(int no, String name, int category, int price, int usepeople, int totalQty, String company,
+			String img, String info) {
 		this.no = no;
 		this.name = name;
 		this.category = category;
 		this.price = price;
 		this.usepeople = usepeople;
-		this.total_qty = total_qty;
+		this.totalQty = totalQty;
 		this.company = company;
 		this.img = img;
 		this.info = info;
-		this.sfileName = sfileName;
-		this.ofileName = ofileName;
 	}
 
 	public int getNo() {
@@ -58,12 +54,15 @@ public class Rentcar {
 	public void setUsepeople(int usepeople) {
 		this.usepeople = usepeople;
 	}
-	public int getTotal_qty() {
-		return total_qty;
+
+	public int getTotalQty() {
+		return totalQty;
 	}
-	public void setTotal_qty(int total_qty) {
-		this.total_qty = total_qty;
+
+	public void setTotalQty(int totalQty) {
+		this.totalQty = totalQty;
 	}
+
 	public String getCompany() {
 		return company;
 	}
@@ -83,21 +82,13 @@ public class Rentcar {
 		this.info = info;
 	}
 
-	public String getSfileName() {
-		return sfileName;
+	@Override
+	public String toString() {
+		return "Rentcar [no=" + no + ", name=" + name + ", category=" + category + ", price=" + price + ", usepeople="
+				+ usepeople + ", totalQty=" + totalQty + ", company=" + company + ", img=" + img + ", info=" + info
+				+ "]";
 	}
 
-	public void setSfileName(String sfileName) {
-		this.sfileName = sfileName;
-	}
-
-	public String getOfileName() {
-		return ofileName;
-	}
-
-	public void setOfileName(String ofileName) {
-		this.ofileName = ofileName;
-	}
 	
 	
 }

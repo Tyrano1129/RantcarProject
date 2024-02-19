@@ -1,0 +1,32 @@
+@charset "UTF-8";
+.carinfoto{
+	width: 600px;
+}
+
+.carinfoto .container {
+	display: flex;
+	align-items: center;
+}
+
+.imgs {
+	width: 400px;
+	height: 200px;
+	text-align: center;
+}
+
+.img {
+	width: 100%;
+	height: 100%;
+}
+
+.carinfo {
+	margin: 50px;
+}
+
+.carinfo td {
+	width: 150px;
+	height: 50px;
+	text-align: center;
+}
+
+button {}

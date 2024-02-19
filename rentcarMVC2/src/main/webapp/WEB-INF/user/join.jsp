@@ -1,51 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@include file="/WEB-INF/parts/header.jsp"%>
-<%-- <link rel="stylesheet" href="${ctx}/css/join.css" /> --%>
-<div class="container">
-	<h1>가입</h1>
-	<form action="joinUser.do" method="POST">
-		<table border="1">
-			<tr>
-				<td><label>아이디  </label></td>
-				<td><input type="text" name="id" id="id"></td>
-				<td><input type="button" value="중복확인" id="checkId"></td>
-			</tr>
-			<tr>
-				<td><label>비밀번호  </label></td>
-				<td colspan="3"><input type="text" name="pw" id="pw"></td>
-
-			</tr>
-			<tr>
-				<td><label> 나이  </label></td>
-				<td colspan="3"><input type="number" name="age"></td>
-			</tr>
-			<tr>
-				<td><label> 직업  </label></td>
-				<td><input type="text" name="job"></td>
-				<td><label> 취미  </label></td>
-				<td><input type="text" name="hobby"></td>
-			</tr>
-			<tr>
-				<td><label> 전화번호  </label></td>
-				<td colspan="3"><input type="text" name="tel"
-					oninput="hypenTel(this)" maxlength="13"></td>
-			</tr>
-			<tr>
-				<td><label>이메일</label></td>
-				<td colspan="3">
-					<input type="text" name="email">
-				</td>
-			</tr>
-			<tr>
-				<td><label>자기소개</label></td>
-				<td colspan="3"><textarea rows="10" cols="20" name="info">반갑습니다.</textarea></td>
-			</tr>
-			<tr>
-				<td colspan="4" align="center"><input type="button"
-					value="가입하기" onclick="vildjoinCheck(form)"></td>
-			</tr>
-		</table>
+<link rel="stylesheet" href="${ctx}/css/join.css" />
+<div class="join-wrapper">
+	<h2>회원가입</h2>
+	<form action="joinUser.do" method="POST" id="join-form">
+		<div class="id">
+			<input type="text" id="id" name="id" placeholder=" 아이디" /> 
+			<input type="button" value="중복확인" id="checkId" />
+		</div>
+		<input type="password" name="pw" placeholder=" 비밀번호" id="pw" />
+		<div class="ajh">
+			<input type="number" name="age" placeholder="나이" /> 
+			<input type="text" name="job" placeholder="직업" /> 
+			<input type="text" name="hobby" placeholder="취미" />
+		</div>
+		<input type="text" name="tel" placeholder=" 전화번호" oninput="hypenTel(this)" maxlength="13" /> 
+		<input type="email" name="email" placeholder=" 이메일" />
+		<textarea name="info" cols="40" rows="10" placeholder=" 자기소개해주세요!" style="resize: none"></textarea>
+		<input type="button" value="가입하기" onclick="vildjoinCheck(form)" />
 	</form>
 </div>
 <%@include file="/WEB-INF/parts/footer.jsp"%>

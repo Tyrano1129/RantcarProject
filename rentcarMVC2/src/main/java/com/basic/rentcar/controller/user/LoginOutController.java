@@ -14,11 +14,12 @@ public class LoginOutController implements Controller {
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		String ctx = request.getContextPath();
 		HttpSession session = request.getSession();
 		
 		session.removeAttribute("logId");
 		
-		return "main";
+		return "re:"+ctx+"/main.do";
 	}
 	
 }
